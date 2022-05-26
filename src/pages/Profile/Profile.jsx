@@ -1,4 +1,4 @@
-import { React , useState } from 'react'
+import { React , useState } from 'react';
 import styles from './Profile.module.scss';
 import Navbar from '../../components/Navbar/Navbar';
 import UserProfile from '../../components/UserProfile/UserProfile';
@@ -7,25 +7,38 @@ import FeedPost from '../../components/FeedPost/FeedPost';
 import FollowUser from '../../components/FollowUser/FollowUser';
 import FollowingUser from '../../components/FollowingUser/FollowingUser';
 
+import { UserFeed } from '../../dummyData/userFeed';
+import { UserFollowers } from '../../dummyData/userFollower';
+import { UserFollowings } from '../../dummyData/userFollowing';
+
 function Profile() {
     const [select , setSelect] = useState('post');
 
     const ManyPost = () => {
         return (
             <>
-                <FeedPost />
-                <FeedPost />
-                <FeedPost />
+                {
+                    UserFeed.map((singleFeed , index) => {
+                        return (
+                            <FeedPost key={index} name={singleFeed.name} activeAgo={singleFeed.activeAgo} post= {singleFeed.post}/>
+                        );
+                    })
+                }
             </>
         );
     }
 
     const ManyFollower = () => {
         return (
+
             <>
-                <FollowUser />
-                <FollowUser />
-                <FollowUser />
+                {
+                    UserFollowers.map((singleFollower , index) => {
+                        return (
+                            <FollowUser key={index} name={singleFollower.name} following={singleFollower.following} />
+                        );
+                    })
+                }
             </>
         );
     }
@@ -33,9 +46,13 @@ function Profile() {
     const ManyFollowing = () => {
         return (
             <>
-                <FollowingUser />
-                <FollowingUser />
-                <FollowingUser />
+                {
+                    UserFollowings.map((singleFollowing , index) => {
+                        return (
+                            <FollowingUser key={index} name={singleFollowing.name} following={singleFollowing.following} />
+                        );
+                    })
+                }  
             </>
         );
     }
@@ -48,13 +65,13 @@ function Profile() {
                     <UserProfile />
                     
                     <div className={styles.profileSelect}>
-                        <button onClick={()=>setSelect('post')}>
+                        <button style={select === 'post' ? {borderTop: '2px solid rgba(0, 0, 0, 0.5)'} : {}} onClick={()=>setSelect('post')}>
                             <ChatOutlinedIcon/> Post
                         </button>
-                        <button onClick={()=>setSelect('followers')}>
+                        <button style={select === 'followers' ? {borderTop: '2px solid rgba(0, 0, 0, 0.5)'} : {}} onClick={()=>setSelect('followers')}>
                             <ChatOutlinedIcon/> Followers
                         </button>
-                        <button onClick={()=>setSelect('following')}>
+                        <button style={select === 'following' ? {borderTop: '2px solid rgba(0, 0, 0, 0.5)'} : {}} onClick={()=>setSelect('following')}>
                             <ChatOutlinedIcon/> Following
                         </button>
                     </div>
