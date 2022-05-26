@@ -28,10 +28,21 @@ $boxShadow : rgba(17, 12, 46, 0.15) 0px 2px 5px -1px, rgba(17, 12, 46, 0.15) 0px
         border-radius: 100%;
         margin: 10px 20px;
 
+        @media (max-width:550px) {
+            height: 45px;
+            width: 45px;
+            margin: 10px;
+        }
+
         >img {
             height: 50px;
             width: 50px;
             padding: 5px;
+
+            @media (max-width:550px) {
+                height: 40px;
+                width: 40px;
+            }
         }
     }
 
@@ -42,6 +53,11 @@ $boxShadow : rgba(17, 12, 46, 0.15) 0px 2px 5px -1px, rgba(17, 12, 46, 0.15) 0px
         align-items: flex-start;
         margin-right: 20px;
         width: 90%;
+
+        @media (max-width:550px) {
+            margin-right: 10px;
+            width: 100%;
+        }
 
         >div {
             display: flex;
@@ -54,12 +70,25 @@ $boxShadow : rgba(17, 12, 46, 0.15) 0px 2px 5px -1px, rgba(17, 12, 46, 0.15) 0px
             >h3 {
                 font-size: 1.2em;
                 color:rgba(0, 0, 0, 0.7);
+
+                @media (max-width:550px) {
+                    font-size: 1em;
+                }
             }
 
             >span {
                 margin-right: 15px;
                 color:rgba(0, 0, 0, 0.5);
                 font-size: 0.8em;
+
+                @media (max-width:550px) {
+                    margin-right: 10px;
+                    font-size: 0.6em;
+                }
+            }
+
+            @media (max-width:550px) {
+                justify-content: space-around;
             }
 
         }
@@ -70,6 +99,11 @@ $boxShadow : rgba(17, 12, 46, 0.15) 0px 2px 5px -1px, rgba(17, 12, 46, 0.15) 0px
             font-size: 0.9em;
             margin: 10px 10px 10px 0px;
             line-height: 20px;
+
+            @media (max-width:550px) {
+                font-size: 0.7em;
+                line-height: 17px;
+            }
         }
     }
 
@@ -85,6 +119,11 @@ $boxShadow : rgba(17, 12, 46, 0.15) 0px 2px 5px -1px, rgba(17, 12, 46, 0.15) 0px
             width: 25px;
             border-radius: 100% 0 0 100%/50% 0 0 50%;
             background-color: rgba(255, 89, 95, 0.8);
+
+            @media (max-width:550px) {
+                height: 44px;
+                width: 22px;
+            }
         }
     }
 }
