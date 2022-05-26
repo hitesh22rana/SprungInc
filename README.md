@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# TweetX
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Frontend Project is made using React JS with all the good practices are implemented while making this App.
+<br>
+<br>
+## Practices :-
 
-## Available Scripts
+To Isolate all components and Pages from each other proper folder structure is used as well as JSX extension for Components and Pages files are used so that we can seperate Components and Pages from other JS Files and Modular SCSS is used so that no style classes overlap with each other.
 
-In the project directory, you can run:
+Every Page and Component is divided in this structure :-
 
-### `npm start`
+FolderName :- ComponentName
+  - ComponentName.jsx
+  - ComponentName.module.scss
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Code Structure :-
 
-### `npm test`
+[src](/src/) folder Contains all the main files and folder
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Further [src](/src/) folder is divided into 5 sections :-
 
-### `npm run build`
+1 [Pages](/src//pages/) :- It Contains all the pages.
+  - [Login](/src/pages/Login/)
+  - [Signup](/src/pages/Signup/)
+  - [Feed](/src/pages/Feed/)
+  - [Users](/src/pages/Users/)
+  - [Profile](/src/pages/Profile/)
+    
+2 [Components](/src/components/) => It Contains all the compnents that are required on different [Pages](/src//pages/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3 [Contexts](src/contexts/) => It Contains all the Context that are to be managed inside the different components basically it is a state management hook. And, the reason to use context API's for the state management is because it is light weight and as per now there are not that much states that are to be managed, but when the project scales we can use state managements libraries like **Redux**.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4 [Dummy Data](src/contexts/) => It Contains all the dummy data. For now, data is hard coded as no Backend is integrated but once backend will integrated we will no longer need this.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5 [Assets](src/assets/) => It contains all the required Images which are used in Various [Pages](/src//pages/) and [Components](/src/components/).
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
