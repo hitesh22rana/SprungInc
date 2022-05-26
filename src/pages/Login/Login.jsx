@@ -1,11 +1,14 @@
+// External Imports
 import { React, useState } from "react";
-import styles from "./Login.module.scss";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+
+// Internal Imports
+import styles from "./Login.module.scss";
 import pablo from "../../assets/pablo.png";
 
-import { Visibility, VisibilityOff } from "@mui/icons-material";
-
 function Login() {
+  // Form data States to capture data Inputs
   const [formData, setFormData] = useState({
     email: "",
     password: "",

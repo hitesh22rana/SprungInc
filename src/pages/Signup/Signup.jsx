@@ -1,9 +1,13 @@
+// External Imports
 import { React, useState } from "react";
-import styles from "./Signup.module.scss";
 import { Link } from "react-router-dom";
+
+// Internal Imports
+import styles from "./Signup.module.scss";
 import pablo from "../../assets/pablo.png";
 
 function Signup() {
+  // Form data States to capture data Inputs
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -45,7 +49,7 @@ function Signup() {
                   setUserData({ ...userData, email: e.target.value })
                 }
               />
-            
+
               <input
                 type={"password"}
                 value={userData.password}

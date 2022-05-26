@@ -1,11 +1,14 @@
+// External Imports
 import React from "react";
-import styles from "./Users.module.scss";
 
+// Internal Imports
+import styles from "./Users.module.scss";
 import Navbar from "../../components/Navbar/Navbar";
 
 import FollowUser from "../../components/FollowUser/FollowUser";
 import FollowingUser from "../../components/FollowingUser/FollowingUser";
 
+// Dummy data
 import { UserFollowers } from "../../dummyData/userFollower";
 import { UserFollowings } from "../../dummyData/userFollowing";
 
