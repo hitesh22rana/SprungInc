@@ -13,7 +13,7 @@ FolderName :- ComponentName
   - ComponentName.jsx
   - ComponentName.module.scss
 <br>
-<br>
+
 ## Code Structure :-
 
 [src](/src/) folder Contains all the main files and folder
